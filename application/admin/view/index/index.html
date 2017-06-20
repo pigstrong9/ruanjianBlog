@@ -1,0 +1,34 @@
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">后台管理系统</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">文章 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/admin/artList" target="list">文章列表</a></li>
+                    <li><a href="/admin/art/showadd" target="list">新增文章</a></li>
+                    <li><a href="/admin/art/typeList" target="list" >类型管理</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">评论<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">评论列表</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/admin/user/userList" target="list">用户列表</a></li>
+                    <li><a href="#">新增用户</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/index/logout">退出&nbsp;&nbsp;&nbsp;</a></li>
+    </ul>
+</nav>
+
+<iframe id="list" name="list"  frameborder="0" width="100%" height="750" src="/admin/artList"></iframe>

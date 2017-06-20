@@ -1,0 +1,44 @@
+{layout name="layout" /}
+<div class="widewrapper subheader">
+    <div class="container">
+        <div class="clean-breadcrumb">
+            <a href="/index/index">首页</a> &nbsp;&rsaquo;&nbsp;
+            <a href='/index/index/type?key={$typeInfo.typeId}'>{$typeInfo.typeName}</a>
+        </div>
+
+        <div class="clean-searchbox">
+            <form action="/index/index/search" method="get" accept-charset="utf-8">
+                <input class="searchfield" id="searchbox" name="key" type="text" placeholder="搜索文章">
+                <button class="searchbutton" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</header>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <div class="row">
+                    {volist name="list" id="art"}
+                    <div class="col-md-6 col-sm-6">
+                        <article class=" blog-teaser">
+                            <header>
+                                <img src="{$art.img}" >
+                                <h3><a href="/index/index/show?id={$art.id}">{$art.title}</a></h3>
+                                <span class="meta">{$art.dateline}&nbsp;&nbsp;&nbsp;{$art.type.typeName}</span>
+                                <hr>
+                            </header>
+                            <div class="body">
+                                {$art.description}
+                            </div>
+                            <div class="clearfix">
+                                <a href="/index/index/show?id={$art.id}" class="btn btn-clean-one">查看详情</a>
+                            </div>
+                        </article>
+                    </div>
+                    {/volist}  
+                </div>
+                {$list->render()}

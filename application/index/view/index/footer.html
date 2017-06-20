@@ -1,0 +1,89 @@
+</div>
+<aside class="col-md-4 blog-aside">
+    <div class="aside-widget">
+        <header>
+            <h3>分类目录</h3>
+        </header>
+        <div class="body clearfix">
+            <ul class="tags">
+                {volist name="typeList" id="type"}
+                <li><a href="/index/index/type?key={$type.typeId}">{$type.typeName}</a></li>
+                {/volist}
+            </ul>
+        </div>
+    </div>
+    <div class="aside-widget">
+        <header>
+            <h3>最新软件</h3>
+        </header>
+        <div class="body">
+            <ul class="clean-list">
+                {volist name="newList" id="newart"}
+                <li><a href="/index/index/show?id={$newart.id}">{$newart.title}</a></li>
+                {/volist}  
+            </ul>
+        </div>
+    </div>
+
+    <div class="aside-widget">
+        <header>
+            <h3>热评软件</h3>
+        </header>
+        <div class="body">
+            <ul class="clean-list">
+                {volist name="hotList" id="hotart"}
+                <li><a href="/index/index/show?id={$hotart.id}">{$hotart.title}</a></li>
+                {/volist}  
+            </ul>
+        </div>
+    </div>
+
+
+</aside>
+</div>
+</div>
+</div>
+
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="fa fa-user"></i>关于我们</h3>
+                    <p>本站是一个热门的安卓软件与PC软件资源分享博客，致力于免费提供优质的原创绿色特别软件、高质量的常用优化软件，偶尔分享些热点资讯及福利，让大家畅享软件的乐趣！</p>
+                    <p>所有软件均为站长提供及网友推荐，全部内容采用撰写共用版权协议，要求署名、非商业用途和相同方式共享。如转载请也遵循撰写共用协议。提供的软件仅供日常使用和研究，不得用于任何商业用途。</p>
+
+                </div>
+
+                <div class="col-md-4 footer-widget">
+                    <!--                    <h3> <i class="fa fa-pencil"></i> Recent Post</h3>
+                                        <ul class="clean-list">
+                                            <li><a href="">Clean - Responsive HTML5 Template</a></li>
+                                            <li><a href="">Responsive Pricing Table</a></li>
+                                            <li><a href="">Yellow HTML5 Template</a></li>
+                                            <li><a href="">Blackor Responsive Theme</a></li>
+                                            <li><a href="">Portfolio Bootstrap Template</a></li>
+                                            <li><a href="">Clean Slider Template</a></li>
+                                        </ul>-->
+                </div>
+
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="fa fa-envelope"></i>免责声明</h3>
+
+                    <p>本站所有资源来自互联网，原创类软件仅为站长兴趣研究，仅供免费参考之用，不得用于任何商业用途。版权归原公司所有！下载试用后请24小时内删除，因下载本站资源造成的损失，全部由使用者本人承担！</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/modernizr.js"></script>
+<script src="/static/js/jg.js"></script>
+
+</body>
+</html>

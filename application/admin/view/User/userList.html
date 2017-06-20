@@ -1,0 +1,26 @@
+               <table class="table table-striped table-bordered table-hover" width="743" border="0" cellpadding="8" cellspacing="1" bgcolor="#000000">
+                        <tr>
+                            <td colspan="7" align="center" bgcolor="#FFFFFF">用户列表</td>
+                        </tr>
+                        <tr>
+                            <td width="37" bgcolor="#FFFFFF">用户名</td>
+                            <td width="82" bgcolor="#FFFFFF">昵称</td>
+                            <td width="200" bgcolor="#FFFFFF">email</td>
+                            <td width="82" bgcolor="#FFFFFF">性别</td>
+                            <td width="100" bgcolor="#FFFFFF">电话</td>
+                            <td width="200" bgcolor="#FFFFFF">密码</td> 
+                            <td width="200" bgcolor="#FFFFFF">操作</td>
+                        </tr>
+                        {volist name="list" id="user"}
+                        <tr>
+                            <td bgcolor="#FFFFFF">{$user.username}</td>
+                            <td bgcolor="#FFFFFF">{$user.nickname}</td>
+                            <td bgcolor="#FFFFFF">{$user.email}</td>
+                            <td bgcolor="#FFFFFF">{$user.sex}</td>
+                            <td bgcolor="#FFFFFF">{$user.phone}</td>
+                            <td bgcolor="#FFFFFF">{$user.password}</td>
+                            <td bgcolor="#FFFFFF"><a href="/admin/user/del?uid={$user.uid}">删除</a>
+                                <a href="/admin/user/showModify?id={$user.uid}">修改</a></td>
+                        </tr>
+                        {/volist}
+                    </table></td>

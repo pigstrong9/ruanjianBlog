@@ -1,0 +1,26 @@
+{layout name="layout" /}
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+	<?php
+		if(empty($list)){	
+			echo "你暂时没有发表文章!";
+		}else{		  
+	?>    
+		<div class="post">
+                    {volist name="list" id="art"}
+			<h1 class="title">{$art.title}<span style="color:#ccc;font-size:14px;">　
+                            　作者：<!--作者放置到这里-->{$art.author}</span></h1>
+			<div class="entry">
+				{$art.description}
+			</div>
+			<div class="meta">
+				<p class="links"><a href="/index/index/show?id={$art.id}" class="more">查看详细</a>&nbsp;&nbsp;&raquo;&nbsp;&nbsp;</p>
+                        </div>
+                         {/volist}    
+		</div>
+            <?php
+		}
+	?>
+	</div>
+  
